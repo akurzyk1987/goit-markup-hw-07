@@ -16,7 +16,7 @@
 body {
   font-family: 'Roboto', sans-serif;
   color: var(--body-text-color);
-  margin: 0 auto;
+  margin: 0;
 }
 * {
   margin: 0;
@@ -209,7 +209,6 @@ section {
   letter-spacing: 0.72px;
   margin-bottom: 72px;
 }
-.brand-description-title,
 .team-name,
 .concept {
   color: var(--headings-color);
@@ -221,11 +220,14 @@ section {
   text-align: center;
 }
 .brand-description-title {
+  color: var(--headings-color);
   font-size: 36px;
   font-weight: 700;
   line-height: 1.11;
+  margin-bottom: 8px;
   letter-spacing: 0.72px;
   text-transform: capitalize;
+  text-align: center;
 }
 .description-item,
 .job,
@@ -268,6 +270,7 @@ section {
   padding: 24px 16px;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .team {
   padding: 32px 16px;
@@ -318,7 +321,6 @@ section {
 }
 /* zmiana */
 .menu-list {
-  display: none;
   gap: 40px;
 }
 /* zmiana */
@@ -337,9 +339,6 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-/* zmiana */
-.description-item {
   max-width: 396px;
 }
 /* zmiana */
@@ -351,8 +350,7 @@ section {
   text-align: center;
   margin-bottom: 8px;
 }
-.menu-list-item,
-.contacts-list-item {
+.menu-list-item {
   padding: 24px 0;
 }
 .visually-hidden {
@@ -851,9 +849,90 @@ section {
   display: flex;
   gap: 56px;
 }
+.brand-description,
+.business-cards,
+.custom,
+.foot {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
 @media (max-width: 767px) {
-  .menu {
+  .menu-list,
+  .menu-list-contacts {
     display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    min-width: 429px;
+    margin: 0 auto;
+    padding: 0 15px;
+  }
+  section {
+    max-width: 768px;
+  }
+  .section {
+    max-width: 768px;
+    padding: 96px auto;
+  }
+  .foot {
+    max-width: 768px;
+  }
+  .heading {
+    width: 768px;
+    height: 436px;
+  }
+  .logo.top {
+    margin-right: 120px;
+  }
+  .menu-list {
+    display: flex;
+  }
+  .menu-list-contacts {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+  .description-list {
+    width: 356px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: unset;
+  }
+  .team-list {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: unset;
+    row-gap: 64px;
+    column-gap: 24px;
+  }
+
+  .client {
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+
+  .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+    gap: 24px;
+  }
+
+  .form-subscribe {
+    display: flex;
+    flex-direction: unset;
+    justify-content: center;
+    gap: 24px;
+  }
+  .footer-title {
+    display: flex;
+    justify-content: flex-start;
+  }
+  .subscribe-input {
+    width: 264px;
   }
 }
 @media (min-width: 768px) {
