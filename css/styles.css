@@ -901,6 +901,9 @@ ul {
   .brand-description-title {
     text-align: start;
   }
+  .bottom-left-block {
+    align-items: start;
+  }
 }
 @media (min-width: 768px) {
   .menu-toggle {
@@ -961,11 +964,7 @@ ul {
   .subscribe-input {
     margin-right: 21px;
   }
-  .bottom-left-block {
-    align-items: start;
-  }
   .brand-description-title {
-    text-align: start;
     font-size: 20px;
     font-weight: 500;
     line-height: 1.2;
